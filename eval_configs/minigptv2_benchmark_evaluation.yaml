@@ -1,0 +1,50 @@
+model:
+  arch: minigpt_v2
+  model_type: pretrain
+  max_txt_len: 500
+  end_sym: "</s>"
+  low_resource: False
+  prompt_template: '[INST] {} [/INST]'
+  llama_model: "/your/path/models/openai/llama-2-7b-chat-hf"
+  ckpt: "/your/path/models/hub/checkpoints/minigptv2_checkpoint.pth"
+  lora_r: 64
+  lora_alpha: 16
+
+
+datasets:
+  cc_sbu_align:
+    vis_processor:
+      train:
+        name: "blip2_image_eval"
+        image_size: 448
+    text_processor:
+      train:
+        name: "blip_caption"
+
+evaluation_datasets:
+  refcoco:
+    eval_file_path: "eval_scripts/eval_data"  
+    img_path: "/your/path/datasets/coco/images/train2014"      
+    max_new_tokens: 20
+    batch_size: 10
+  refcocog:
+    eval_file_path: "eval_scripts/eval_data"  
+    img_path: "/your/path/datasets/coco/images/train2014"      
+    max_new_tokens: 20
+    batch_size: 10
+  refcoco+:
+    eval_file_path: "eval_scripts/eval_data"  
+    img_path: "/your/path/datasets/coco/images/train2014"      
+    max_new_tokens: 20
+    batch_size: 10
+
+
+run:
+  task: image_text_pretrain
+  name: minigptv2_evaluation
+  save_path: "save_path/ucl"
+
+  
+
+  
+
