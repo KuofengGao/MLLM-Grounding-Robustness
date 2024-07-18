@@ -7,7 +7,7 @@ This repository provides the pytorch implementatin of our ICLR 2024 Workshop on 
 Multi-modal Large Language Models (MLLMs) have recently achieved enhanced performance across various vision-language tasks including visual grounding capabilities. However, the adversarial robustness of visual grounding remains unexplored in MLLMs. To fill this gap, we use referring expression comprehension (REC) as an example task in visual grounding and propose three adversarial attack paradigms as follows. Firstly, untargeted adversarial attacks induce MLLMs to generate incorrect bounding boxes for each object. Besides, exclusive targeted adversarial attacks cause all generated outputs to the same target bounding box. In addition, permuted targeted adversarial attacks aim to permute all bounding boxes among different objects within a single image. Extensive experiments demonstrate that the proposed methods can successfully attack visual grounding capabilities of MLLMs. Our methods not only provide a new perspective for designing novel attacks but also serve as a strong baseline for improving the adversarial robustness for visual grounding of MLLMs.
 
 <div align=center>
-<img src="assets/example.png" width="800" height="600" alt="Three adversarial attack paradigms are proposed to evaluate the adversarial robustness for visual grounding of MLLMs."/><br/>
+<img src="assets/example.png" width="800" height="400" alt="Three adversarial attack paradigms are proposed to evaluate the adversarial robustness for visual grounding of MLLMs."/><br/>
 </div>
 
 ## Installation

@@ -166,11 +166,9 @@ jobs/logs/
 *ipynb
 .history/
 *.json
-*.sh
 .ipynb_common
 logs/
 results/
-prompts/
 output/
 ckpt/
 divide_vqa.py
